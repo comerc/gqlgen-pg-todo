@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/oshalygin/gqlgen-pg-todo-example/models"
+	"github.com/comerc/gqlgen-pg-todo/models"
 )
 
 // UserLoaderConfig captures the config to create a new UserLoader

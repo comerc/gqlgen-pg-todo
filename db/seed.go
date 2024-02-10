@@ -3,9 +3,10 @@ package database
 import (
 	"time"
 
+	"github.com/comerc/gqlgen-pg-todo/models"
+
 	"github.com/go-pg/pg/v9"
 	"github.com/go-pg/pg/v9/orm"
-	"github.com/oshalygin/gqlgen-pg-todo-example/models"
 	"github.com/theckman/yacspin"
 )
 
@@ -28,7 +29,7 @@ func Seed(db *pg.DB) error {
 
 func createSchemas(db *pg.DB) error {
 	spinner, _ := yacspin.New(yacspin.Config{
-		Delay:         100 * time.Millisecond,
+		Frequency:     100 * time.Millisecond,
 		CharSet:       yacspin.CharSets[59],
 		Suffix:        " Hydrating Schema",
 		StopMessage:   "Complete",
@@ -55,7 +56,7 @@ func createSchemas(db *pg.DB) error {
 
 func seedUsers(db *pg.DB) error {
 	spinner, _ := yacspin.New(yacspin.Config{
-		Delay:         100 * time.Millisecond,
+		Frequency:     100 * time.Millisecond,
 		CharSet:       yacspin.CharSets[59],
 		Suffix:        " Hydrating Users ",
 		StopMessage:   "Complete",
@@ -103,7 +104,7 @@ func seedUsers(db *pg.DB) error {
 
 func seedTodos(db *pg.DB) error {
 	spinner, _ := yacspin.New(yacspin.Config{
-		Delay:         100 * time.Millisecond,
+		Frequency:     100 * time.Millisecond,
 		CharSet:       yacspin.CharSets[59],
 		Suffix:        " Hydrating Todos ",
 		StopMessage:   "Complete",

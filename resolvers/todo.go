@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/oshalygin/gqlgen-pg-todo-example/dataloaders"
-	"github.com/oshalygin/gqlgen-pg-todo-example/graph/generated"
-	"github.com/oshalygin/gqlgen-pg-todo-example/models"
+	"github.com/comerc/gqlgen-pg-todo/dataloaders"
+	"github.com/comerc/gqlgen-pg-todo/graph/generated"
+	"github.com/comerc/gqlgen-pg-todo/models"
 )
 
 type todoResolver struct{ *Resolver }

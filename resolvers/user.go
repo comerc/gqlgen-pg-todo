@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/oshalygin/gqlgen-pg-todo-example/models"
+	"github.com/comerc/gqlgen-pg-todo/models"
 )
 
 func (r *queryResolver) User(ctx context.Context, id int) (*models.User, error) {

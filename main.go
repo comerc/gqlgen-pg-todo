@@ -4,16 +4,17 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/comerc/gqlgen-pg-todo/dataloaders"
+	database "github.com/comerc/gqlgen-pg-todo/db"
+	"github.com/comerc/gqlgen-pg-todo/graph/generated"
+	"github.com/comerc/gqlgen-pg-todo/resolvers"
+
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/handler/extension"
 	"github.com/99designs/gqlgen/graphql/playground"
 	"github.com/fatih/color"
 	"github.com/go-chi/chi"
 	"github.com/go-pg/pg/v9"
-	"github.com/oshalygin/gqlgen-pg-todo-example/dataloaders"
-	database "github.com/oshalygin/gqlgen-pg-todo-example/db"
-	"github.com/oshalygin/gqlgen-pg-todo-example/graph/generated"
-	"github.com/oshalygin/gqlgen-pg-todo-example/resolvers"
 )
 
 const (

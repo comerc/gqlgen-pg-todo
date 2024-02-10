@@ -2,8 +2,9 @@
 package resolvers
 
 import (
+	"github.com/comerc/gqlgen-pg-todo/graph/generated"
+
 	"github.com/go-pg/pg/v9"
-	"github.com/oshalygin/gqlgen-pg-todo-example/graph/generated"
 )
 
 type Resolver struct {

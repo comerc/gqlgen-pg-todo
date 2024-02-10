@@ -5,9 +5,10 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/comerc/gqlgen-pg-todo/graph/generated"
+	"github.com/comerc/gqlgen-pg-todo/models"
+
 	"github.com/go-pg/pg/v9"
-	"github.com/oshalygin/gqlgen-pg-todo-example/graph/generated"
-	"github.com/oshalygin/gqlgen-pg-todo-example/models"
 )
 
 func User(db *pg.DB, w http.ResponseWriter, r *http.Request, next http.Handler) {
