@@ -27,7 +27,7 @@ func lineSeparator() {
 func startMessage() {
 	lineSeparator()
 	color.Green("Listening on localhost%s\n", port)
-	color.Green("Visit `http://localhost%s/graphql` in your browser\n", port)
+	color.Green("Visit `http://localhost%s/` in your browser\n", port)
 	lineSeparator()
 }
 
