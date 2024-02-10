@@ -12,11 +12,9 @@ This project is intended to help newcomers to gqlgen and GraphQL. This isn't mea
 
 1. **Install [Go 1.13 or greater](https://dl.google.com/go/go1.13.darwin-amd64.pkg)**.
    - The recommended approach is to use the installer to get started.
-2. **Install Postgres**
-   - This varies depending on the environment that you're on and I don't intend for this repository to list the steps necessary to install pg.
-3. **Ensure that you have a `todos`** database created
+2. **Ensure that you have a `todos`** database created
    - There's a makefile step already available, `make init` which will create the database if it doesn't already exist
-4. **Start the magic by running the following command**
+3. **Start the magic by running the following command**
    - `go run main.go`
 
 # Updating GraphQL Models + CodeGen
@@ -175,7 +173,7 @@ make gen
 go generate ./...
 ```
 
-Depending on what you added you will now get compiler errors in the file `resolvers.go`.  What you see depends on your terminal output or your IDEA.  Here are some examples of unimplemented code:
+Depending on what you added you will now get compiler errors in the file `resolvers.go`. What you see depends on your terminal output or your IDEA. Here are some examples of unimplemented code:
 
 <img alt="Unimplemented Resolver" src="docs/unimplemented-resolver.png" />
 

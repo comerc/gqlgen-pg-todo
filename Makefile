@@ -46,7 +46,10 @@ build:
 	- CGO_ENABLED=0 GOOS=linux go build -a -gcflags='-N -l' -installsuffix cgo -o main .
 
 init:
-	- psql -c "CREATE DATABASE todos"
+	- docker run -p 5432:5432 --name postgres -e POSTGRES_DB=todos -e POSTGRES_HOST_AUTH_METHOD=trust -d postgres:latest
+
+db:
+	- docker exec -it postgres psql -U postgres
 
 start:
 	- go run main.go
