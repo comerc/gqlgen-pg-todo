@@ -59,4 +59,4 @@ lint:
 	- golint
 
 
-.PHONY: build patch minor major start gen dataloader init
+.PHONY: build patch minor major db start gen dataloader init

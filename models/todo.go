@@ -3,19 +3,18 @@ package models
 import "time"
 
 type Todo struct {
-	ID         int    `json:",pk,unique,notnull"`
-	Name       string `json:"name"`
-	IsComplete bool   `json:"isComplete"`
-	IsDeleted  bool   `json:"isDeleted"`
+	ID         int `pg:",pk,unique,notnull"`
+	Name       string
+	IsComplete bool
+	IsDeleted  bool
+	CreatedAt  time.Time
+	UpdatedAt  time.Time
 
-	CreatedBy int `json:"createdBy" pg:"fk:user_id"`
-	UpdatedBy int `json:"updatedBy" pg:"fk:user_id"`
-
-	CreatedAt time.Time `json:"createdAt"`
-	UpdatedAt time.Time `json:"updatedAt"`
+	CreatedBy int
+	UpdatedBy int
 }
 
 type TodoInput struct {
-	Name      string `json:"name"`
-	CreatedBy int    `json:"user"`
+	Name      string
+	CreatedBy int
 }

@@ -3,18 +3,18 @@ package models
 import "time"
 
 type User struct {
-	ID    int    `json:"id" pg:",pk,unique,notnull"`
-	Email string `json:"email" pg:",unique,notnull"`
+	ID    int    `pg:",pk,unique,notnull"`
+	Email string `pg:",unique,notnull"`
 
-	FirstName string `json:"firstName"`
-	LastName  string `json:"lastName"`
+	FirstName string
+	LastName  string
 
-	CreatedAt time.Time `json:"createdAt"`
-	UpdatedAt time.Time `json:"updatedAt"`
+	CreatedAt time.Time
+	UpdatedAt time.Time
 }
 
 type UserInput struct {
-	Email     string `json:"email"`
-	FirstName string `json:"firstName"`
-	LastName  string `json:"lastName"`
+	Email     string
+	FirstName string
+	LastName  string
 }
