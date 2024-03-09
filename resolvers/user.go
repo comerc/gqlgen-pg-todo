@@ -19,6 +19,8 @@ func (r *queryResolver) User(ctx context.Context, id int) (*models.User, error) 
 func (r *queryResolver) Users(ctx context.Context, limit *int, offset *int) ([]models.User, error) {
 	var users []models.User
 
+	// TODO: limit & offset
+
 	if err := r.DB.Model(&users).Select(); err != nil {
 		return nil, err
 	}

@@ -40,6 +40,8 @@ func main() {
 	})
 	defer db.Close()
 
+	fmt.Printf("%#v\n", db.Options())
+
 	err := database.Seed(db)
 	if err != nil {
 		panic(err)
